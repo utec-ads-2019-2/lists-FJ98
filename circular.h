@@ -9,51 +9,104 @@ class CircularLinkedList : public List<T> {
         CircularLinkedList() : List<T>() {}
 
         T front() {
-            // TODO
+            // TO DO
+            return this->head->data;
         }
 
         T back() {
-            // TODO
+            // TO DO
+            return this->tail->data;
         }
 
         void push_front(T value) {
-            // TODO
+            // TO DO
+            auto newNode = new Node<T>{value, nullptr, nullptr};
+
+            if ( empty() ) {
+                this->head = newNode;
+                this->tail = newNode;
+            } else {
+//                newNode->next = this->head;
+//                this->head->prev = newNode;
+//                this->head = newNode;
+//                this->tail = this->head;
+//                this->head = this->tail;
+            }
+
+
         }
 
         void push_back(T value) {
-            // TODO
+            // TO DO
+            auto newNode = new Node<T>{value, nullptr, nullptr};
+
+            if ( empty() ) {
+                this->head = newNode;
+                this->tail = newNode;
+            } else {
+
+            }
+
+
         }
 
         void pop_front() {
-            // TODO
+            // TO DO
+            if ( empty() ) { throw runtime_error("Empty list!"); }
+
+            auto keepNode = this->head->next;
+
+//            this->head->killSelf();
+//            this->head = keepNode;
+//            this->head->prev = nullptr;
+//            this->tail = this->head;
+//            this->head = this->tail;
+
         }
 
         void pop_back() {
-            // TODO
+            // TO DO
+            if ( empty() ) { throw runtime_error("Empty list!"); }
+
+            auto keepNode = this->tail->prev;
+
+
+
         }
 
         T operator[](int index) {
-            // TODO
+            // TO DO
+
+
+
         }
 
         bool empty() {
-            // TODO
+            // TO DO
+            return this->head == nullptr && this->tail == nullptr;
         }
 
         int size() {
-            // TODO
+            // TO DO
+            int counter = 0;
+
+            for (auto pNode = this->head; pNode != nullptr ; pNode = pNode->next) {
+                ++counter;
+            }
+
+            return counter;
         }
 
         void clear() {
-            // TODO
+            // TO DO
         }
 
         void sort() {
-            // TODO
+            // TO DO
         }
     
         void reverse() {
-            // TODO
+            // TO DO
         }
 
         string name() {
@@ -61,15 +114,15 @@ class CircularLinkedList : public List<T> {
         }
 
         BidirectionalIterator<T> begin() {
-            // TODO
+            // TO DO
         }
 
 	    BidirectionalIterator<T> end() {
-            // TODO
+            // TO DO
         }
 
         void merge(CircularLinkedList<T> list) {
-            // TODO
+            // TO DO
         }
 };
 

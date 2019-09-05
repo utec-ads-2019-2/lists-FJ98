@@ -10,51 +10,105 @@ class LinkedList : public List<T> {
         LinkedList() : List<T>() {}
 
         T front() {
-            // TODO
+            // TO DO
+            return this->head->data;
         }
 
         T back() {
-            // TODO
+            // TO DO
+            return this->tail->data;
         }
 
         void push_front(T value) {
-            // TODO
+            // TO DO
+            auto newNode = new Node<T>{value, nullptr, nullptr};
+
+            if ( empty() ) {
+                this->head = newNode;
+                this->tail = newNode;
+            } else {
+                newNode->next = this->head;
+                this->head->prev = newNode;
+                this->head = newNode;
+            }
+
         }
 
         void push_back(T value) {
-            // TODO
+            // TO DO
+            auto newNode = new Node<T>{value, nullptr, nullptr};
+            if ( empty() ) {
+                this->head = newNode;
+                this->tail = newNode;
+            } else {
+                newNode->prev = this->head;
+                this->head->next = newNode;
+            }
         }
 
         void pop_front() {
-            // TODO
+            // TO DO
+            if ( empty() ) { throw runtime_error("Empty list!"); }
+
+            auto keepNode = this->head->next;
+
+            this->head->killSelf();
+            this->head = keepNode;
+            this->head->prev = nullptr;
         }
 
         void pop_back() {
-            // TODO
+            // TO DO
+            if ( empty() ) { throw runtime_error("Empty list!"); }
+
+            auto keepNode = this->tail->prev;
+
+            this->tail->killSelf();
+            this->tail = keepNode;
+            this->tail->next = nullptr;
+
         }
 
         T operator[](int index) {
-            // TODO
+            // TO DO
+            if ( index < 0 ) throw runtime_error("Index should be zero or positive!\n");
+            if ( index > size() - 1 ) throw runtime_error("Index is bigger than the list!\n");
+
+            auto pNode = this->head;
+
+            while (index--) {
+                pNode = pNode->next;
+            }
+
+            return pNode->data;
         }
 
         bool empty() {
-            // TODO
+            // TO DO
+            return this->head == nullptr && this->tail == nullptr;
         }
 
         int size() {
-            // TODO
+            // TO DO
+            int counter = 0;
+
+            for (auto pNode = this->head; pNode != nullptr; pNode = pNode->next) {
+                ++counter;
+            }
+
+            return counter;
         }
 
         void clear() {
-            // TODO
+            // TO DO
         }
 
         void sort() {
-            // TODO
+            // TO DO
         }
     
         void reverse() {
-            // TODO
+            // TO DO
         }
 
         string name() {
@@ -62,15 +116,17 @@ class LinkedList : public List<T> {
         }
 
         BidirectionalIterator<T> begin() {
-            // TODO
+            // TO DO
+            return BidirectionalIterator<T>(this->head);
         }
 
 	    BidirectionalIterator<T> end() {
-            // TODO
+            // TO DO
+            return nullptr;
         }
 
         void merge(LinkedList<T> list) {
-            // TODO
+            // TO DO
         }
 };
 

@@ -6,9 +6,11 @@ struct Node {
     T data;
     Node<T>* next;
     Node<T>* prev;
+    Node(): data{0}, next{nullptr}, prev{nullptr} {}
 
     void killSelf() {
-        // TODO
+        // TO DO
+        delete this;
     }
 };
 

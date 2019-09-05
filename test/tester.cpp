@@ -1,10 +1,10 @@
 #include "tester.h"
 
 void Tester::execute() {
-    Collection collections[] = { forward_list, linked_list, circular_list };
+    Collection collections[] = { forward_list/*, linked_list, circular_list*/ };
     size_t numberOfCollections = sizeof(collections) / sizeof(collections[0]);
 
-    for (int i = 0; i < numberOfCollections; i++) {
+    for (int i = 0; i < static_cast<int>(numberOfCollections); i++) {
         for (int j = 0; j < NUMBER_OF_TESTS; ++j) {
             testList<int>(collections[i]);
             testList<char>(collections[i]);
@@ -41,7 +41,7 @@ void Tester::testList(Collection collection) {
     List<T>* list1 = getCollection<T>(collection);
 
     ASSERT(list->size() == 0, "The " + list->name() + " size is not working");
-    ASSERT(list->empty() == true, "The " + list->name() + " empty is not working");
+    ASSERT(list->empty(), "The " + list->name() + " empty is not working");
 
     list->push_back(elements[0]);
     list->push_back(elements[1]);
@@ -76,9 +76,9 @@ void Tester::testList(Collection collection) {
 
     list->clear();
     ASSERT(list->size() == 0, "The " + list->name() + " size or clear is not working");
-    ASSERT(list->empty() == true, "The " + list->name() + " empty is not working");
+    ASSERT(list->empty(), "The " + list->name() + " empty is not working");
 
-    testSpecifics(collection, list);
+//    testSpecifics(collection, list);
 }
 
 template <typename T>
@@ -107,7 +107,7 @@ void Tester::testForward(ForwardList<T>* list) {
     unsigned int size = mocker.generateRandomInt(5);
     T* elements = mocker.generateRandomArray<T>(size);
 
-    ForwardList<T>* list1 = new ForwardList<T>;
+    auto list1 = new ForwardList<T>;
     list1->push_back(elements[0]);
     list1->push_back(elements[1]);
     list1->push_back(elements[2]);
@@ -131,7 +131,7 @@ void Tester::testLinked(LinkedList<T>* list) {
     unsigned int size = mocker.generateRandomInt(5);
     T* elements = mocker.generateRandomArray<T>(size);
 
-    LinkedList<T>* list1 = new LinkedList<T>;
+    auto list1 = new LinkedList<T>;
     list1->push_back(elements[0]);
     list1->push_back(elements[1]);
     list1->push_back(elements[2]);
@@ -157,7 +157,7 @@ void Tester::testCircularLinked(CircularLinkedList<T>* list) {
     unsigned int size = mocker.generateRandomInt(5);
     T* elements = mocker.generateRandomArray<T>(size);
 
-    CircularLinkedList<T>* list1 = new CircularLinkedList<T>;
+    auto list1 = new CircularLinkedList<T>;
     list1->push_back(elements[0]);
     list1->push_back(elements[1]);
     list1->push_back(elements[2]);

@@ -7,22 +7,34 @@ template <typename T>
 class ForwardIterator : public Iterator<T> {
     public:
         ForwardIterator() : Iterator<T>() {};
-        ForwardIterator(Node<T> *node) : Iterator<T>(node) {};
+        explicit ForwardIterator(Node<T> *node) : Iterator<T>(node) {};
 
-        ForwardIterator<T> operator=(ForwardIterator<T> other) {
-            // TODO
+        ForwardIterator<T> operator=(ForwardIterator<T>* other) {
+            // TO DO
+            ForwardIterator<T> assignNode(other->current);
+            return assignNode;
         }
 
         bool operator!=(ForwardIterator<T> other) {
-            // TODO
+            // TO DO
+            return this->current != other.current;
         }
 
         ForwardIterator<T> operator++() {
-            // TODO
+            // TO DO
+            if(this->current == nullptr)
+                throw runtime_error("Invalid Operation!");
+
+            this->current = this->current->next;
+            return *this;
         }
 
         T operator*() {
-            // TODO
+            // TO DO
+            if(this->current == nullptr)
+                throw runtime_error("Invalid Operation!");
+
+            return this->current->data;
         }
 };
 

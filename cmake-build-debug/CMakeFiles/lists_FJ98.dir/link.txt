@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/lists_FJ98.dir/mock/mocker.cpp.o CMakeFiles/lists_FJ98.dir/test/tester.cpp.o CMakeFiles/lists_FJ98.dir/main.cpp.o  -o lists_FJ98 
