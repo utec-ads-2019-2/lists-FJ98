@@ -60,7 +60,7 @@ void Tester::testList(Collection collection) {
     list->pop_back();
     ASSERT(list->size() == 4, "The " + list->name() + " pop_back is not working");
     ASSERT(list->back() == elements[4], "The " + list->name() + " back is not working");
-    
+
     list->reverse();
 
     ASSERT(list->back() == elements[1], "The " + list->name() + " reverse is not working");
@@ -78,7 +78,7 @@ void Tester::testList(Collection collection) {
     ASSERT(list->size() == 0, "The " + list->name() + " size or clear is not working");
     ASSERT(list->empty(), "The " + list->name() + " empty is not working");
 
-//    testSpecifics(collection, list);
+    testSpecifics(collection, list);
 }
 
 template <typename T>

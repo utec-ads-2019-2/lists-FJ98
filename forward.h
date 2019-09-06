@@ -18,6 +18,7 @@ class ForwardList : public List<T> {
         T back() {
             // TO DO
             if ( empty() ) { throw runtime_error("Empty list!\n"); }
+
             return this->tail->data;
         }
 
@@ -48,11 +49,11 @@ class ForwardList : public List<T> {
 
         void pop_front() {
             // TO DO
-            if (empty()) { throw runtime_error("Empty list!\n"); }
+            if ( empty() ) { throw runtime_error("Empty list!\n"); }
 
-            auto popNode = this->head;   // Podria ser : auto popNode = this->head->next; ?
-            this->head = popNode->next;  // Podria ser : this->head->killSelf(); ?
-            popNode->killSelf();         // Podria ser : this->head = popNode; ?
+            auto popNode = this->head;
+            this->head = popNode->next;
+            popNode->killSelf();
 
         }
 
@@ -68,13 +69,8 @@ class ForwardList : public List<T> {
             }
 
             this->tail = keepNode;
-            popNode->killSelf(); // Podria ser keepNode->next->killSelf()?
+            popNode->killSelf();
             this->tail->next = nullptr;
-
-//            Podria ser ?
-//            this->tail->killSelf();
-//            this->tail=keepNode;
-//            this->tail->next=nullptr;
 
         }
 
@@ -107,37 +103,77 @@ class ForwardList : public List<T> {
 
             return counter;
 
-//            Podria ser solo esto: return this->nodes; ???
         }
 
         void clear() {
             // TO DO
+            if ( empty() ) { throw runtime_error("Empty list!\n"); }
 
+            for (auto p =  this->head; p != nullptr; p = p->next) {
+                p->killSelf();
+            }
+
+            this->tail = nullptr;
+            this->head = nullptr;
         }
 
         void sort() {
             // TO DO
+            if ( empty() ) { throw runtime_error("Empty list!\n"); }
+
+            int swapped, i;
+            Node<T>* ptr1, *lptr = nullptr;
+
+            do{
+                swapped = 0;
+
+                for (ptr1 = this->head; ptr1->next != lptr; ptr1 = ptr1->next) {
+                    if (ptr1->data > ptr1->next->data) {
+                        std::swap(ptr1->data, ptr1->next->data);
+                        swapped = 1;
+                    }
+                }
+                lptr = ptr1;
+            } while (swapped);
         }
     
         void reverse() {
             // TO DO
+            if ( empty() ) { throw runtime_error("Empty list!\n"); }
+
+            Node<T> *previous = nullptr, *next = nullptr;
+            auto current = this->head;
+
+            this->tail = this->head;
+
+            while (current != nullptr) {
+                next = current->next;
+                current->next  = previous;
+                previous = current;
+                current = next;
+            }
+
+            this->head = previous;
+
         }
 
         string name() { return "Forward List"; }
 
         ForwardIterator<T> begin() {
             // TO DO
-            return ForwardIterator<T>(this->head);
+            return ForwardIterator<T>( this->head );
         }
 
 	    ForwardIterator<T> end() {
             // TO DO
-            return nullptr;
+            return ForwardIterator<T>( nullptr );
         }
 
         void merge(ForwardList<T> list) {
             // TO DO
-
+            for (auto p = list.head; p != nullptr; p = p->next) {
+                this->push_back(p->data);
+            }
         }
 };
 

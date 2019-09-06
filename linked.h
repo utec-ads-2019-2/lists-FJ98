@@ -109,6 +109,9 @@ class LinkedList : public List<T> {
     
         void reverse() {
             // TO DO
+            for (auto p = this->tail; p != nullptr ; p = p->prev) {
+
+            }
         }
 
         string name() {

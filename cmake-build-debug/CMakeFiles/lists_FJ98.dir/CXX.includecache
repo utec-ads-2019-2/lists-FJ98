@@ -38,6 +38,12 @@ iterators/bidirectional_iterator.h
 node.h
 /home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/node.h
 
+/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/main.cpp
+iostream
+-
+test/tester.h
+/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test/tester.h
+
 /home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/mock/mocker.h
 random
 -
