@@ -8,36 +8,36 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug"/>
+				<Option working_dir="/home/felix/ADS-20192/lists-FJ98/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug"/>
+				<Option working_dir="/home/felix/ADS-20192/lists-FJ98/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lists_FJ98">
-				<Option output="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/lists_FJ98" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug"/>
+				<Option output="/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/lists_FJ98" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/felix/ADS-20192/lists-FJ98/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/."/>
-					<Add directory="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterators"/>
-					<Add directory="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/mock"/>
-					<Add directory="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test"/>
+					<Add directory="/home/felix/ADS-20192/lists-FJ98/."/>
+					<Add directory="/home/felix/ADS-20192/lists-FJ98/iterators"/>
+					<Add directory="/home/felix/ADS-20192/lists-FJ98/mock"/>
+					<Add directory="/home/felix/ADS-20192/lists-FJ98/test"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -48,23 +48,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 lists_FJ98"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 lists_FJ98"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="lists_FJ98/fast">
-				<Option output="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/lists_FJ98" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug"/>
+				<Option output="/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/lists_FJ98" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/felix/ADS-20192/lists-FJ98/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/."/>
-					<Add directory="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterators"/>
-					<Add directory="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/mock"/>
-					<Add directory="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test"/>
+					<Add directory="/home/felix/ADS-20192/lists-FJ98/."/>
+					<Add directory="/home/felix/ADS-20192/lists-FJ98/iterators"/>
+					<Add directory="/home/felix/ADS-20192/lists-FJ98/mock"/>
+					<Add directory="/home/felix/ADS-20192/lists-FJ98/test"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -75,63 +75,63 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 lists_FJ98/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 lists_FJ98/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug"/>
+				<Option working_dir="/home/felix/ADS-20192/lists-FJ98/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/circular.h">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/circular.h">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/forward.h">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/forward.h">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterator.h">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/iterator.h">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterators/bidirectional_iterator.h">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/iterators/bidirectional_iterator.h">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterators/forward_iterator.h">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/iterators/forward_iterator.h">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/linked.h">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/linked.h">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/list.h">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/list.h">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/main.cpp">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/main.cpp">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/mock/mocker.cpp">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/mock/mocker.cpp">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/mock/mocker.h">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/mock/mocker.h">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/node.h">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/node.h">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test/tester.cpp">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/test/tester.cpp">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test/tester.h">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/test/tester.h">
 			<Option target="lists_FJ98"/>
 		</Unit>
-		<Unit filename="/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/CMakeLists.txt">
+		<Unit filename="/home/felix/ADS-20192/lists-FJ98/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

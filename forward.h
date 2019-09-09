@@ -97,7 +97,7 @@ class ForwardList : public List<T> {
             // TO DO
             int counter = 0;
 
-            for (auto pNode = this->head; pNode != nullptr; pNode = pNode->next) {
+            for (auto pNode = this->head; pNode != nullptr ; pNode = pNode->next) {
                 ++counter;
             }
 
@@ -115,45 +115,102 @@ class ForwardList : public List<T> {
 
             this->tail = nullptr;
             this->head = nullptr;
+
         }
+
+        Node<T> *doMerge(Node<T> *leftSide, Node<T> *rightSide) {
+
+            auto sortedTmp = new Node<T>{0, nullptr, nullptr};
+
+            while (leftSide != nullptr && rightSide != nullptr) {
+                if (leftSide->data < rightSide->data) {
+                    sortedTmp->next = leftSide;
+                    leftSide = leftSide->next;
+                } else {
+                    sortedTmp->next = rightSide;
+                    rightSide = rightSide->next;
+                }
+                sortedTmp = sortedTmp->next;
+            }
+
+            while (leftSide != nullptr) {
+                sortedTmp->next = leftSide;
+                leftSide = leftSide->next;
+            }
+
+            while (rightSide != nullptr) {
+                sortedTmp->next = rightSide;
+                rightSide = rightSide->next;
+            }
+
+            return sortedTmp->next;
+        }
+
+        Node<T> *mergeSort(Node<T> *startFirstHalf) {
+
+            if (startFirstHalf->next == nullptr) { return startFirstHalf; } // base case to avoid infinite loop in the recursion
+
+            auto endFirstHalf = startFirstHalf;
+            auto startSecondHalf = startFirstHalf;
+            auto endSecondHalf = startFirstHalf;
+
+            while (endSecondHalf != nullptr && endSecondHalf->next != nullptr) {
+                endFirstHalf = startSecondHalf;
+                startSecondHalf = startSecondHalf->next;
+                endSecondHalf = endSecondHalf->next->next;
+            }
+
+            endFirstHalf->next = nullptr;
+
+            auto leftSide = mergeSort(startFirstHalf);
+            auto rightSide = mergeSort(startSecondHalf);
+
+            return doMerge(leftSide, rightSide);
+
+        }
+
 
         void sort() {
             // TO DO
-            if ( empty() ) { throw runtime_error("Empty list!\n"); }
+            if ( empty() || this->head->next == nullptr) { throw std::runtime_error("List already sorted!"); }
+            mergeSort(this->head);
 
-            int swapped, i;
-            Node<T>* ptr1, *lptr = nullptr;
+//-------------------------------------------------------------------------------------------------
+//            int swapped;
+//            Node<T> *pNode, *lptr = nullptr;
+//            do{
+//                swapped = 0;
+//
+//                for (pNode = this->head; pNode->next != lptr; pNode = pNode->next) {
+//                    if (pNode->data > pNode->next->data) {
+//                        std::swap(pNode->data, pNode->next->data);
+//                        swapped = 1;
+//                    }
+//                }
+//                lptr = pNode;
+//            } while (swapped);
+//--------------------------------------------------------------------------------------------------
 
-            do{
-                swapped = 0;
-
-                for (ptr1 = this->head; ptr1->next != lptr; ptr1 = ptr1->next) {
-                    if (ptr1->data > ptr1->next->data) {
-                        std::swap(ptr1->data, ptr1->next->data);
-                        swapped = 1;
-                    }
-                }
-                lptr = ptr1;
-            } while (swapped);
         }
     
         void reverse() {
             // TO DO
             if ( empty() ) { throw runtime_error("Empty list!\n"); }
 
-            Node<T> *previous = nullptr, *next = nullptr;
+            Node<T> *previous = nullptr;
             auto current = this->head;
+            Node<T> *next = nullptr;
 
-            this->tail = this->head;
-
-            while (current != nullptr) {
+             do {
                 next = current->next;
                 current->next  = previous;
                 previous = current;
                 current = next;
-            }
+            } while (current != nullptr);
 
-            this->head = previous;
+            current = this->head;
+            this->head = this->tail;
+            this->tail = current;
 
         }
 
@@ -171,9 +228,27 @@ class ForwardList : public List<T> {
 
         void merge(ForwardList<T> list) {
             // TO DO
-            for (auto p = list.head; p != nullptr; p = p->next) {
-                this->push_back(p->data);
-            }
+            Node<T> *pNode = list.head;
+            do {
+                push_back( pNode->data );
+                pNode = pNode ->next;
+            } while ( pNode != nullptr );
+
+//-------------------------------------------------------------------------
+//            for (auto p = list.head; p != nullptr; p = p->next) {
+//                this->push_back(p->data);
+//            }
+
+//            for (int i = 0; i < list.size(); ++i) {
+//                this->push_back(list[i]);
+//            }
+
+//            auto tmpNode = list.head;
+//            do {
+//                this->push_back(tmpNode->data);
+//                tmpNode = tmpNode->next;
+//            } while (tmpNode != nullptr);
+//------------------------------------------------------------------------------
         }
 };
 

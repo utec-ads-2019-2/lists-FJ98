@@ -7,26 +7,42 @@ template <typename T>
 class BidirectionalIterator : public Iterator<T> {
     public:
         BidirectionalIterator() : Iterator<T>() {};
-        BidirectionalIterator(Node<T> *node) : Iterator<T>(node) {};
+        explicit BidirectionalIterator(Node<T> *node) : Iterator<T>(node) {};
 
         BidirectionalIterator<T> operator=(BidirectionalIterator<T> other) {
-            // TODO
+            // TO DO
+            return BidirectionalIterator<T>(other->current);
         }
 
         bool operator!=(BidirectionalIterator<T> other) {
-            // TODO
+            // TO DO
+            return this->current != other.current;
         }
 
         BidirectionalIterator<T> operator++() {
-            // TODO
+            // TO DO
+            if(this->current == nullptr)
+                throw runtime_error("Invalid Operation!");
+
+            this->current = this->current->next;
+            return *this;
         }
 
         BidirectionalIterator<T> operator--() {
-            // TODO
+            // TO DO
+            if(this->current == nullptr)
+                throw runtime_error("Invalid Operation!");
+
+            this->current = this->current->prev;
+            return *this;
         }
 
         T operator*() {
-            // TODO
+            // TO DO
+            if(this->current == nullptr)
+                throw runtime_error("Invalid Operation!");
+
+            return this->current->data;
         }
 };
 

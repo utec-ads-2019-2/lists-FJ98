@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/main.cpp" "/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/CMakeFiles/lists_FJ98.dir/main.cpp.o"
-  "/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/mock/mocker.cpp" "/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/CMakeFiles/lists_FJ98.dir/mock/mocker.cpp.o"
-  "/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test/tester.cpp" "/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/CMakeFiles/lists_FJ98.dir/test/tester.cpp.o"
+  "/home/felix/ADS-20192/lists-FJ98/main.cpp" "/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/CMakeFiles/lists_FJ98.dir/main.cpp.o"
+  "/home/felix/ADS-20192/lists-FJ98/mock/mocker.cpp" "/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/CMakeFiles/lists_FJ98.dir/mock/mocker.cpp.o"
+  "/home/felix/ADS-20192/lists-FJ98/test/tester.cpp" "/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/CMakeFiles/lists_FJ98.dir/test/tester.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

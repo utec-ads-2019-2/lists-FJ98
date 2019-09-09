@@ -6,57 +6,57 @@
 
 #IncludeRegexTransform: 
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/circular.h
+/home/felix/ADS-20192/lists-FJ98/circular.h
 list.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/list.h
+/home/felix/ADS-20192/lists-FJ98/list.h
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/forward.h
+/home/felix/ADS-20192/lists-FJ98/forward.h
 list.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/list.h
+/home/felix/ADS-20192/lists-FJ98/list.h
 iterators/forward_iterator.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterators/forward_iterator.h
+/home/felix/ADS-20192/lists-FJ98/iterators/forward_iterator.h
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterator.h
+/home/felix/ADS-20192/lists-FJ98/iterator.h
 node.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/node.h
+/home/felix/ADS-20192/lists-FJ98/node.h
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterators/bidirectional_iterator.h
+/home/felix/ADS-20192/lists-FJ98/iterators/bidirectional_iterator.h
 ../iterator.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterator.h
+/home/felix/ADS-20192/lists-FJ98/iterator.h
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterators/forward_iterator.h
+/home/felix/ADS-20192/lists-FJ98/iterators/forward_iterator.h
 ../iterator.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterator.h
+/home/felix/ADS-20192/lists-FJ98/iterator.h
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/linked.h
+/home/felix/ADS-20192/lists-FJ98/linked.h
 list.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/list.h
+/home/felix/ADS-20192/lists-FJ98/list.h
 iterators/bidirectional_iterator.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterators/bidirectional_iterator.h
+/home/felix/ADS-20192/lists-FJ98/iterators/bidirectional_iterator.h
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/list.h
+/home/felix/ADS-20192/lists-FJ98/list.h
 node.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/node.h
+/home/felix/ADS-20192/lists-FJ98/node.h
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/main.cpp
+/home/felix/ADS-20192/lists-FJ98/main.cpp
 iostream
 -
 test/tester.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test/tester.h
+/home/felix/ADS-20192/lists-FJ98/test/tester.h
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/mock/mocker.h
+/home/felix/ADS-20192/lists-FJ98/mock/mocker.h
 random
 -
 type_traits
 -
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/node.h
+/home/felix/ADS-20192/lists-FJ98/node.h
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test/tester.cpp
+/home/felix/ADS-20192/lists-FJ98/test/tester.cpp
 tester.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test/tester.h
+/home/felix/ADS-20192/lists-FJ98/test/tester.h
 
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test/tester.h
+/home/felix/ADS-20192/lists-FJ98/test/tester.h
 stdexcept
 -
 iostream
@@ -64,11 +64,11 @@ iostream
 assert.h
 -
 ../mock/mocker.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/mock/mocker.h
+/home/felix/ADS-20192/lists-FJ98/mock/mocker.h
 ../forward.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/forward.h
+/home/felix/ADS-20192/lists-FJ98/forward.h
 ../linked.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/linked.h
+/home/felix/ADS-20192/lists-FJ98/linked.h
 ../circular.h
-/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/circular.h
+/home/felix/ADS-20192/lists-FJ98/circular.h
 

@@ -1,7 +1,7 @@
 #include "tester.h"
 
 void Tester::execute() {
-    Collection collections[] = { forward_list/*, linked_list, circular_list*/ };
+    Collection collections[] = { forward_list , linked_list , circular_list };
     size_t numberOfCollections = sizeof(collections) / sizeof(collections[0]);
 
     for (int i = 0; i < static_cast<int>(numberOfCollections); i++) {
@@ -61,8 +61,8 @@ void Tester::testList(Collection collection) {
     ASSERT(list->size() == 4, "The " + list->name() + " pop_back is not working");
     ASSERT(list->back() == elements[4], "The " + list->name() + " back is not working");
 
-    list->reverse();
 
+    list->reverse();
     ASSERT(list->back() == elements[1], "The " + list->name() + " reverse is not working");
     ASSERT(list->front() == elements[4], "The " + list->name() + " reverse is not working");
     ASSERT((*list)[1] == elements[3], "The " + list->name() + " reverse is not working");
@@ -71,7 +71,6 @@ void Tester::testList(Collection collection) {
     list->push_back(elements[6]);
     list->push_back(elements[7]);
     list->sort();
-
     ASSERT(isSorted(list), "The " + list->name() + " sort is not working");
 
     list->clear();

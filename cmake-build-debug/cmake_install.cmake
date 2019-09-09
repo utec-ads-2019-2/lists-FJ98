@@ -1,4 +1,4 @@
-# Install script for directory: /home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98
+# Install script for directory: /home/felix/ADS-20192/lists-FJ98
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/felix/ADS-20192/lists-FJ98/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -29,7 +29,19 @@ class List {
 
         ~List() {
             // TO DO
+            if (this->tail->next == nullptr) {
 
+                for (auto p = this->head; p != nullptr; p = p->next) {
+                    p->killSelf();
+                }
+
+            } else {
+
+                for (auto p = this->head; p != this->head; p = p->next) {
+                    p->killSelf();
+                }
+
+            }
         }
 };
 

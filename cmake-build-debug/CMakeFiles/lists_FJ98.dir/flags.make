@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/. -I/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/iterators -I/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/mock -I/home/felix/GitHubs-2019-2/ADS-20192/lists-FJ98/test 
+CXX_INCLUDES = -I/home/felix/ADS-20192/lists-FJ98/. -I/home/felix/ADS-20192/lists-FJ98/iterators -I/home/felix/ADS-20192/lists-FJ98/mock -I/home/felix/ADS-20192/lists-FJ98/test 
 
