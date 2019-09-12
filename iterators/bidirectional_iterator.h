@@ -9,24 +9,27 @@ class BidirectionalIterator : public Iterator<T> {
         BidirectionalIterator() : Iterator<T>() {};
         explicit BidirectionalIterator(Node<T> *node) : Iterator<T>(node) {};
 
-        BidirectionalIterator<T> operator=(BidirectionalIterator<T> other) {
-            // TO DO
-            return BidirectionalIterator<T>(other.current);
+
+        BidirectionalIterator<T>& operator=(BidirectionalIterator<T> other) { // TO DO
+            return *this;
         }
 
-        bool operator!=(BidirectionalIterator<T> other) {
-            // TO DO
+
+        bool operator!=(BidirectionalIterator<T> other) { // TO DO
             return this->current != other.current;
         }
 
-        BidirectionalIterator<T> operator++() {
-            // TO DO
+
+        BidirectionalIterator<T> operator++() { // TO DO
+
             if (this->current == nullptr)
                 throw runtime_error("Invalid Operation!");
 
             this->current = this->current->next;
             return *this;
+
         }
+
 
         BidirectionalIterator<T> operator--() {
             // TO DO

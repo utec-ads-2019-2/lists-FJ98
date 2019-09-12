@@ -23,9 +23,10 @@ class ForwardList : public List<T> {
             return this->tail->data;
         }
 
-        void push_front(T value) {
-            // TO DO
+        void push_front(T value) { // TO DO
+
             auto newNode = new Node<T>{value, nullptr, nullptr};
+
             if ( empty() ) {
                 this->head = newNode;
                 this->tail = newNode;
@@ -36,9 +37,10 @@ class ForwardList : public List<T> {
 
         }
 
-        void push_back(T value) {
-            // TO DO
+        void push_back(T value) { // TO DO
+
             auto newNode = new Node<T>{value, nullptr, nullptr};
+
             if ( empty() ) {
                 this->head = newNode;
                 this->tail = newNode;
@@ -46,11 +48,12 @@ class ForwardList : public List<T> {
                 this->tail->next = newNode;
                 this->tail = newNode;
             }
+
         }
 
-        void pop_front() {
-            // TO DO
-            if ( empty() ) { throw runtime_error("Empty list!\n"); }
+        void pop_front() { // TO DO
+
+            if ( empty() ) { return; }
 
             auto popNode = this->head;
             this->head = popNode->next;
@@ -58,9 +61,9 @@ class ForwardList : public List<T> {
 
         }
 
-        void pop_back() {
-            // TO DO
-            if ( empty() ) { throw runtime_error("Empty list!\n"); }
+        void pop_back() { // TO DO
+
+            if ( empty() ) { return; }
 
             auto keepNode = this->head;
             auto popNode = this->tail;
@@ -75,10 +78,10 @@ class ForwardList : public List<T> {
 
         }
 
-        T operator[](int index) {
-            // TO DO
+        T operator[](int index) { // TO DO
+
             if ( index < 0 ) throw runtime_error("Index should be zero or positive!\n");
-            if ( index > size() - 1 ) throw runtime_error("Index is bigger than the list!\n");
+            if ( index > this->size() - 1 ) throw runtime_error("Index is bigger than the list!\n");
 
             index = index % this->size();
 
@@ -89,29 +92,39 @@ class ForwardList : public List<T> {
             }
 
             return pNode->data;
+
         }
 
-        bool empty() {
-            // TO DO
+        bool empty() { // TO DO
             return this->head == nullptr && this->tail == nullptr;
         }
 
-        int size() {
-            // TO DO
-            int counter = 0;
+        int size() { // TO DO
+            this->nodes = 0;
 
             for (auto pNode = this->head; pNode != nullptr ; pNode = pNode->next) {
-                ++counter;
+                ++this->nodes;
             }
 
-            return counter;
+            return this->nodes;
+//            int counter = 0;
+//
+//            for (auto pNode = this->head; pNode != nullptr ; pNode = pNode->next) {
+//                ++counter;
+//            }
+//
+//            return counter;
 
         }
 
         void clear() {
+
+            if ( empty() ) { return; }
+
             this->head->killSelf();
             this->tail = nullptr;
             this->head = nullptr;
+
         }
 
         Node<T> *doMerge(Node<T> *leftSide, Node<T> *rightSide) {
@@ -140,6 +153,7 @@ class ForwardList : public List<T> {
             }
 
             return sortedTmp->next;
+
         }
 
         Node<T> *mergeSort(Node<T> *startFirstHalf) {
@@ -197,20 +211,18 @@ class ForwardList : public List<T> {
 
         string name() { return "Forward List"; }
 
-        ForwardIterator<T> begin() {
-            // TO DO
+        ForwardIterator<T> begin() { // TO DO
             return ForwardIterator<T>( this->head );
         }
 
-	    ForwardIterator<T> end() {
-            // TO DO
+	    ForwardIterator<T> end() { // TO DO
             return ForwardIterator<T>( nullptr );
         }
 
-        void merge(ForwardList<T> list) {
-            // TO DO
+        void merge(ForwardList<T> list) { // TO DO
             
             Node<T> *pNode = list.head;
+
             while ( pNode != nullptr ) {
                 push_back( pNode->data );
                 pNode = pNode ->next;

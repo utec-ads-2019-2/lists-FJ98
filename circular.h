@@ -63,7 +63,18 @@ class CircularLinkedList : public List<T> {
 
         void pop_front() { // TO DO
 
-            if (empty()) return;
+            if ( empty() ) { return; }
+
+            if (this->head == this->head->next) {
+                delete this->head;
+                this->head->next = nullptr;
+                this->head->prev = nullptr;
+                this->tail->next = nullptr;
+                this->tail->prev = nullptr;
+                this->head = nullptr;
+                this->tail = nullptr;
+                return;
+            }
 
             auto keepNode = this->head->next;
 
@@ -76,7 +87,18 @@ class CircularLinkedList : public List<T> {
 
         void pop_back() { // TO DO
 
-            if (!this->head) return;
+            if ( empty() ) return;
+
+            if (this->head == this->head->next) {
+                delete this->head;
+                this->head->next = nullptr;
+                this->head->prev = nullptr;
+                this->tail->next = nullptr;
+                this->tail->prev = nullptr;
+                this->head = nullptr;
+                this->tail = nullptr;
+                return;
+            }
 
             auto keepNode = this->tail->prev;
 
@@ -100,6 +122,7 @@ class CircularLinkedList : public List<T> {
             }
 
             return pNode->data;
+
         }
 
         bool empty() { // TO DO
@@ -108,20 +131,20 @@ class CircularLinkedList : public List<T> {
 
         int size() { // TO DO
 
-            int counter = 0;
+            this->nodes = 0;
             Node<T>* start = this->head;
 
             if( empty() ) { return 0; }
 
-            ++counter;
+            ++this->nodes;
             start = start->next;
 
             while(start != this->head){
-                ++counter;
+                ++this->nodes;
                 start = start->next;
             }
 
-            return counter;
+            return this->nodes;
 
         }
 

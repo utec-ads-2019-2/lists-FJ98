@@ -66,7 +66,7 @@ class LinkedList : public List<T> {
 
         void pop_back() {
             // TO DO
-            if ( empty() ) { throw runtime_error("Empty list!"); }
+            if ( empty() ) { return; }
 
             auto keepNode = this->tail->prev;
 
@@ -95,22 +95,26 @@ class LinkedList : public List<T> {
             return this->head == nullptr && this->tail == nullptr;
         }
 
-        int size() {
-            // TO DO
-            int counter = 0;
+        int size() { // TO DO
+
+            this->nodes = 0;
 
             for (auto pNode = this->head; pNode != nullptr ; pNode = pNode->next) {
-                ++counter;
+                ++this->nodes;
             }
 
-            return counter;
+            return this->nodes;
+
         }
 
-        void clear() {
-            // TO DO
+        void clear() { // TO DO
+
+            if ( empty() ) { return; }
+
             this->head->killSelf();
             this->tail = nullptr;
             this->head = nullptr;
+
         }
 
         Node<T> *doMerge(Node<T> *leftSide, Node<T> *rightSide) {
@@ -139,6 +143,7 @@ class LinkedList : public List<T> {
             }
 
             return sortedTmp->next;
+
         }
 
         Node<T> *mergeSort(Node<T> *startFirstHalf) {
@@ -164,14 +169,16 @@ class LinkedList : public List<T> {
 
         }
 
-        void sort() {
-            // TO DO
+        void sort() { // TO DO
+
             if ( empty() || this->head->next == nullptr) { throw std::runtime_error("List already sorted!"); }
+
             mergeSort(this->head);
+
         }
     
-        void reverse() {
-            // TO DO
+        void reverse() { // TO DO
+
             if ( empty() ) { throw std::runtime_error("Empty list!\n"); }
 
             Node<T> *next = nullptr;
@@ -192,40 +199,24 @@ class LinkedList : public List<T> {
 
         }
 
-        string name() {
-            return "Linked List";
-        }
+        string name() { return "Linked List"; }
 
-        BidirectionalIterator<T> begin() {
-            // TO DO
+        BidirectionalIterator<T> begin() { // TO DO
             return BidirectionalIterator<T>(this->head);
         }
 
-	    BidirectionalIterator<T> end() {
-            // TO DO
+	    BidirectionalIterator<T> end() { // TO DO
             return BidirectionalIterator<T>(nullptr);
         }
 
-        void merge(LinkedList<T> list) {
-            // TO DO
+        void merge(LinkedList<T> list) { // TO DO
 
             Node<T> *pNode = list.head;
+
             while ( pNode != nullptr ) {
                 push_back( pNode->data );
                 pNode = pNode ->next;
             }
-
-//------------------------------------------------------------------------------
-//            for (auto p = list.head; p != nullptr; p = p->next) {
-//                this->push_back(p->data);
-//            }
-
-//            auto tmpNode = list.head;
-//            do {
-//                this->push_back(tmpNode->data);
-//                tmpNode = tmpNode->next;
-//            } while (tmpNode != nullptr);
-//------------------------------------------------------------------------------
 
         }
 };
