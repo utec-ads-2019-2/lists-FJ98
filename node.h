@@ -10,6 +10,10 @@ struct Node {
 
     void killSelf() {
         // TO DO
+        if ( this->next ) {
+            this->next->killSelf();
+        }
+
         delete this;
     }
 };

@@ -9,5 +9,8 @@ int main(int argc, char *argv[]) {
     cout << "===========================================================" << endl << endl;
 
     Tester::execute();
+//    ForwardList<int> list0;
+//    LinkedList<int> list1;
+//    CircularLinkedList<int> list2;
     return EXIT_SUCCESS;
 }

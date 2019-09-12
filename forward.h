@@ -12,6 +12,7 @@ class ForwardList : public List<T> {
         T front() {
             // TO DO
             if ( empty() ) { throw runtime_error("Empty list!\n"); }
+
             return this->head->data;
         }
 
@@ -53,7 +54,7 @@ class ForwardList : public List<T> {
 
             auto popNode = this->head;
             this->head = popNode->next;
-            popNode->killSelf();
+            delete popNode;
 
         }
 
@@ -69,7 +70,7 @@ class ForwardList : public List<T> {
             }
 
             this->tail = keepNode;
-            popNode->killSelf();
+            delete popNode;
             this->tail->next = nullptr;
 
         }
@@ -78,6 +79,8 @@ class ForwardList : public List<T> {
             // TO DO
             if ( index < 0 ) throw runtime_error("Index should be zero or positive!\n");
             if ( index > size() - 1 ) throw runtime_error("Index is bigger than the list!\n");
+
+            index = index % this->size();
 
             auto pNode = this->head;
 
@@ -106,16 +109,9 @@ class ForwardList : public List<T> {
         }
 
         void clear() {
-            // TO DO
-            if ( empty() ) { throw runtime_error("Empty list!\n"); }
-
-            for (auto p =  this->head; p != nullptr; p = p->next) {
-                p->killSelf();
-            }
-
+            this->head->killSelf();
             this->tail = nullptr;
             this->head = nullptr;
-
         }
 
         Node<T> *doMerge(Node<T> *leftSide, Node<T> *rightSide) {
@@ -170,31 +166,16 @@ class ForwardList : public List<T> {
         }
 
 
-        void sort() {
-            // TO DO
-            if ( empty() || this->head->next == nullptr) { throw std::runtime_error("List already sorted!"); }
-            mergeSort(this->head);
+        void sort() { // TO DO
 
-//-------------------------------------------------------------------------------------------------
-//            int swapped;
-//            Node<T> *pNode, *lptr = nullptr;
-//            do{
-//                swapped = 0;
-//
-//                for (pNode = this->head; pNode->next != lptr; pNode = pNode->next) {
-//                    if (pNode->data > pNode->next->data) {
-//                        std::swap(pNode->data, pNode->next->data);
-//                        swapped = 1;
-//                    }
-//                }
-//                lptr = pNode;
-//            } while (swapped);
-//--------------------------------------------------------------------------------------------------
+            if ( empty() || this->head->next == nullptr) { throw std::runtime_error("List already sorted!"); }
+
+            mergeSort(this->head);
 
         }
     
-        void reverse() {
-            // TO DO
+        void reverse() { // TO DO
+
             if ( empty() ) { throw runtime_error("Empty list!\n"); }
 
             Node<T> *previous = nullptr;
@@ -228,27 +209,13 @@ class ForwardList : public List<T> {
 
         void merge(ForwardList<T> list) {
             // TO DO
+            
             Node<T> *pNode = list.head;
-            do {
+            while ( pNode != nullptr ) {
                 push_back( pNode->data );
                 pNode = pNode ->next;
-            } while ( pNode != nullptr );
+            }
 
-//-------------------------------------------------------------------------
-//            for (auto p = list.head; p != nullptr; p = p->next) {
-//                this->push_back(p->data);
-//            }
-
-//            for (int i = 0; i < list.size(); ++i) {
-//                this->push_back(list[i]);
-//            }
-
-//            auto tmpNode = list.head;
-//            do {
-//                this->push_back(tmpNode->data);
-//                tmpNode = tmpNode->next;
-//            } while (tmpNode != nullptr);
-//------------------------------------------------------------------------------
         }
 };
 

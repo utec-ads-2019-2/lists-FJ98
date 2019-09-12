@@ -11,7 +11,7 @@ class BidirectionalIterator : public Iterator<T> {
 
         BidirectionalIterator<T> operator=(BidirectionalIterator<T> other) {
             // TO DO
-            return BidirectionalIterator<T>(other->current);
+            return BidirectionalIterator<T>(other.current);
         }
 
         bool operator!=(BidirectionalIterator<T> other) {
@@ -21,7 +21,7 @@ class BidirectionalIterator : public Iterator<T> {
 
         BidirectionalIterator<T> operator++() {
             // TO DO
-            if(this->current == nullptr)
+            if (this->current == nullptr)
                 throw runtime_error("Invalid Operation!");
 
             this->current = this->current->next;

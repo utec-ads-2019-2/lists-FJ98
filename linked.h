@@ -60,7 +60,7 @@ class LinkedList : public List<T> {
             auto popNode = this->head;
 
             this->head = this->head->next;
-            popNode->killSelf();
+            delete popNode;
             this->head->prev = nullptr;
         }
 
@@ -70,7 +70,7 @@ class LinkedList : public List<T> {
 
             auto keepNode = this->tail->prev;
 
-            this->tail->killSelf();
+            delete this->tail;
             this->tail = keepNode;
             this->tail->next = nullptr;
 
@@ -108,18 +108,9 @@ class LinkedList : public List<T> {
 
         void clear() {
             // TO DO
-            if ( empty() ) { throw runtime_error("Empty list!\n"); }
-
-            for (auto p =  this->head; p != nullptr; p = p->next) {
-                p->killSelf();
-            }
-
+            this->head->killSelf();
             this->tail = nullptr;
             this->head = nullptr;
-
-
-
-
         }
 
         Node<T> *doMerge(Node<T> *leftSide, Node<T> *rightSide) {
@@ -219,10 +210,10 @@ class LinkedList : public List<T> {
             // TO DO
 
             Node<T> *pNode = list.head;
-            do {
+            while ( pNode != nullptr ) {
                 push_back( pNode->data );
                 pNode = pNode ->next;
-            } while ( pNode != nullptr );
+            }
 
 //------------------------------------------------------------------------------
 //            for (auto p = list.head; p != nullptr; p = p->next) {

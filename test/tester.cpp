@@ -38,7 +38,7 @@ void Tester::testList(Collection collection) {
     unsigned int size = mocker.generateRandomInt(10);
     T* elements = mocker.generateRandomArray<T>(size);
     List<T>* list = getCollection<T>(collection);
-    List<T>* list1 = getCollection<T>(collection);
+//    List<T>* list1 = getCollection<T>(collection);
 
     ASSERT(list->size() == 0, "The " + list->name() + " size is not working");
     ASSERT(list->empty(), "The " + list->name() + " empty is not working");
@@ -91,14 +91,14 @@ bool Tester::isSorted(List<T>* list) {
     return true;
 }
 
-template <typename T>
-void Tester::print(List<T>* list) {
-    for (int i = 0; i < list->size(); ++i) {
-        cout << (*list)[i] << " ";
-    }
-
-    cout << endl;
-}
+//template <typename T>
+//void Tester::print(List<T>* list) {
+//    for (int i = 0; i < list->size(); ++i) {
+//        cout << (*list)[i] << " ";
+//    }
+//
+//    cout << endl;
+//}
 
 template <typename T>
 void Tester::testForward(ForwardList<T>* list) {
