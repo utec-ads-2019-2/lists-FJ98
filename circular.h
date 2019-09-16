@@ -110,7 +110,7 @@ class CircularLinkedList : public List<T> {
         }
 
         T operator[](int index) { // TO DO
-
+            // No deberías controlar el segundo caso en las listas circulares
             if ( index < 0 ) throw std::runtime_error("Index should be zero or positive!\n");
             if ( index > size() - 1 ) throw std::runtime_error("Index is bigger than the list!\n");
 
@@ -205,6 +205,7 @@ class CircularLinkedList : public List<T> {
         }
 
 	    BidirectionalIterator<T> end() { // TO DO
+            // Cómo controlas el caso del iterador en bucle while (it != list.end()) sin do while?
             return BidirectionalIterator<T>(this->head->prev);
         }
 

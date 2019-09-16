@@ -11,6 +11,7 @@ class BidirectionalIterator : public Iterator<T> {
 
 
         BidirectionalIterator<T>& operator=(BidirectionalIterator<T> other) { // TO DO
+        // Falta igualar
             return *this;
         }
 

@@ -189,7 +189,7 @@ class ForwardList : public List<T> {
         }
     
         void reverse() { // TO DO
-
+            // Si está vacío que no haga nada
             if ( empty() ) { throw runtime_error("Empty list!\n"); }
 
             Node<T> *previous = nullptr;

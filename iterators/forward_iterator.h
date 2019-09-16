@@ -11,6 +11,7 @@ class ForwardIterator : public Iterator<T> {
 
         ForwardIterator<T> operator=(ForwardIterator<T>* other) {
             // TO DO
+            // Estás creando un nuevo iterador
             ForwardIterator<T> assignNode(other->current);
             return assignNode;
         }
